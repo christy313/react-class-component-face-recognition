@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "./App.css";
 import Navigation from "./components/Navigation/Navigation";
 import Logo from "./components/Logo/Logo";
+import ImageLinkForm from "./components/ImageLinkForm/ImageLinkForm";
+import Rank from "./components/Rank/Rank";
 
 export default class App extends Component {
   render() {
@@ -9,8 +11,9 @@ export default class App extends Component {
       <div>
         <Navigation />
         <Logo />
-        {/* <ImageLinkForm />
-        <FaceRecogniton /> */}
+        <Rank />
+        <ImageLinkForm />
+        {/* <FaceRecogniton /> */}
       </div>
     );
   }
