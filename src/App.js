@@ -1,14 +1,15 @@
 import React, { Component } from "react";
 import "./App.css";
 import Navigation from "./components/Navigation/Navigation";
+import Logo from "./components/Logo/Logo";
 
 export default class App extends Component {
   render() {
     return (
       <div>
         <Navigation />
-        {/* <Logo />
-        <ImageLinkForm />
+        <Logo />
+        {/* <ImageLinkForm />
         <FaceRecogniton /> */}
       </div>
     );
