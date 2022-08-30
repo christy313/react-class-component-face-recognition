@@ -22,6 +22,7 @@ export default class App extends Component {
       route: "signIn",
     };
   }
+
   calculateFaceLocation = (data) => {
     const clarifaiFace =
       data.outputs[0].data.regions[0].region_info.bounding_box;
@@ -55,12 +56,16 @@ export default class App extends Component {
       .catch((err) => console.log(err));
   };
 
+  onRouteChange = (route) => {
+    this.setState({ route: route });
+  };
+
   render() {
     return (
       <div>
-        <Navigation />
+        <Navigation onRouteChange={this.onRouteChange} />
         {this.state.route === "signIn" ? (
-          <SignIn />
+          <SignIn onRouteChange={this.onRouteChange} />
         ) : (
           <>
             <Logo />
