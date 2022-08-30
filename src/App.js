@@ -18,7 +18,10 @@ export default class App extends Component {
   };
 
   onButtonSubmit = () => {
-    console.log("hi");
+    app.models.predict("", "url").then(
+      function (response) {},
+      function (err) {}
+    );
   };
 
   render() {
