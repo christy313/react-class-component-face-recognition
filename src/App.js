@@ -19,6 +19,7 @@ export default class App extends Component {
       input: "",
       imageUrl: "",
       box: {},
+      route: "signIn",
     };
   }
   calculateFaceLocation = (data) => {
@@ -58,13 +59,22 @@ export default class App extends Component {
     return (
       <div>
         <Navigation />
-        <Logo />
-        <Rank />
-        <ImageLinkForm
-          onInputChange={this.onInputChange}
-          onButtonSubmit={this.onButtonSubmit}
-        />
-        <FaceRecognition box={this.state.box} imageUrl={this.state.imageUrl} />
+        {this.state.route === "signIn" ? (
+          <SignIn />
+        ) : (
+          <>
+            <Logo />
+            <Rank />
+            <ImageLinkForm
+              onInputChange={this.onInputChange}
+              onButtonSubmit={this.onButtonSubmit}
+            />
+            <FaceRecognition
+              box={this.state.box}
+              imageUrl={this.state.imageUrl}
+            />
+          </>
+        )}
       </div>
     );
   }

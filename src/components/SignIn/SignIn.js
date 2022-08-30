@@ -2,11 +2,11 @@ import React from "react";
 
 const SignIn = () => {
   return (
-    <div className="">
+    <article className="br3 ba b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
       <main className="pa4 black-80">
-        <form className="measure center">
+        <form className="measure tc">
           <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
-            <legend className="f4 fw6 ph0 mh0">Sign In</legend>
+            <legend className="f1 fw6 ph0 mh0">Sign In</legend>
             <div className="mt3">
               <label className="db fw6 lh-copy f6" for="email-address">
                 Email
@@ -29,10 +29,6 @@ const SignIn = () => {
                 id="password"
               />
             </div>
-            <label className="pa0 ma0 lh-copy f6 pointer">
-              <input type="checkbox" />
-              Remember me
-            </label>
           </fieldset>
           <div className="">
             <input
@@ -43,15 +39,12 @@ const SignIn = () => {
           </div>
           <div className="lh-copy mt3">
             <a href="#0" className="f6 link dim black db">
-              Sign up
-            </a>
-            <a href="#0" className="f6 link dim black db">
-              Forgot your password?
+              Register
             </a>
           </div>
         </form>
       </main>
-    </div>
+    </article>
   );
 };
 
