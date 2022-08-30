@@ -16,17 +16,19 @@ export default class App extends Component {
     super();
     this.state = {
       input: "",
+      imageUrl: "",
     };
   }
 
   onInputChange = (e) => {
-    console.log(e.target.value);
+    this.setState({ input: e.target.value });
   };
 
   onButtonSubmit = () => {
+    this.setState({ imageUrl: this.state.input });
     app.models
       .predict(
-        "53e1df302c079b3db8a0a36033ed2d15",
+        Clarifai.COLOR_MODEL,
         "https://imgs.search.brave.com/qXpEkNeP0l2xUrG9o30HeeWsdYPhZzf3TyNPwvRLh8Y/rs:fit:1200:750:1/g:ce/aHR0cHM6Ly8xNzM0/ODExMDUxLnJzYy5j/ZG43Ny5vcmcvZGF0/YS9pbWFnZXMvZnVs/bC8zNzE5MjUvZ29v/Z2xlLW1lZXQtaG93/LXRvLWNoYW5nZS1s/YXlvdXQtd2l0aC00/OS1wZXJzb24tZ3Jp/ZC12aWV3LmpwZw"
       )
       .then(
@@ -47,7 +49,7 @@ export default class App extends Component {
           onInputChange={this.onInputChange}
           onButtonSubmit={this.onButtonSubmit}
         />
-        <FaceRecognition />
+        <FaceRecognition imageUrl={this.state.imageUrl} />
       </div>
     );
   }
