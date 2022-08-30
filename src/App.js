@@ -26,17 +26,15 @@ export default class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({ imageUrl: this.state.input });
-    app.models
-      .predict(
-        Clarifai.COLOR_MODEL,
-        "https://imgs.search.brave.com/qXpEkNeP0l2xUrG9o30HeeWsdYPhZzf3TyNPwvRLh8Y/rs:fit:1200:750:1/g:ce/aHR0cHM6Ly8xNzM0/ODExMDUxLnJzYy5j/ZG43Ny5vcmcvZGF0/YS9pbWFnZXMvZnVs/bC8zNzE5MjUvZ29v/Z2xlLW1lZXQtaG93/LXRvLWNoYW5nZS1s/YXlvdXQtd2l0aC00/OS1wZXJzb24tZ3Jp/ZC12aWV3LmpwZw"
-      )
-      .then(
-        function (response) {
-          console.log(response);
-        },
-        function (err) {}
-      );
+    app.models.predict(Clarifai.FACE_DETECT_MODEL, this.state.input).then(
+      function (response) {
+        console.log(
+          response.outputs[0].data.regions[0].region_info.bounding_box
+        );
+      },
+
+      function (err) {}
+    );
   };
 
   render() {
