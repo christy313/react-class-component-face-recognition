@@ -6,6 +6,7 @@ import Logo from "./components/Logo/Logo";
 import ImageLinkForm from "./components/ImageLinkForm/ImageLinkForm";
 import Rank from "./components/Rank/Rank";
 import FaceRecognition from "./components/FaceRecognition/FaceRecognition";
+import SignIn from "./components/SignIn/SignIn";
 
 const app = new Clarifai.App({
   apiKey: "3261c928d20848b6a4b8674d822130a8",
@@ -23,6 +24,7 @@ export default class App extends Component {
   calculateFaceLocation = (data) => {
     const clarifaiFace =
       data.outputs[0].data.regions[0].region_info.bounding_box;
+    console.log(clarifaiFace);
     const image = document.getElementById("input-image");
     const width = Number(image.width);
     const height = Number(image.height);
