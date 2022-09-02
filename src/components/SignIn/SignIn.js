@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 export default class SignIn extends Component {
   constructor(props) {
-    super();
+    super(props);
     this.state = {
       signInEmail: "",
       signInPassword: "",
@@ -27,8 +27,9 @@ export default class SignIn extends Component {
       }),
     })
       .then((res) => res.json())
-      .then((data) => {
-        if (data === "success") {
+      .then((user) => {
+        if (user.id) {
+          this.props.loadUser(user);
           this.props.onRouteChange("home");
         }
       });
