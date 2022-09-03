@@ -8,7 +8,7 @@ const FaceRecognition = ({ imageUrl, box }) => {
         <img
           id="input-image"
           src={imageUrl}
-          alt="Face detection"
+          alt=""
           width="500px"
           height="auto"
         />
