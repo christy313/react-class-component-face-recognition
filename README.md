@@ -7,9 +7,9 @@ This is a simple React app for face-detection with login and sign up functions.
 
 ### Technologies
 
-Front-end: React/Tachyons
+[Front-end](https://github.com/christy313/react-class-component-face-recognition): React/Tachyons
 
-Back-end: Express/knex/PostgreSQL
+[Back-end](https://github.com/christy313/react-class-component-face-recognition-back-end): Express/knex/PostgreSQL
 
 Face detection API: Clarifai
 
