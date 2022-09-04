@@ -65,7 +65,7 @@ export default class App extends Component {
 
   onImageSubmit = () => {
     this.setState({ imageUrl: this.state.input });
-    fetch("http://localhost:8080/imageurl", {
+    fetch("https://clarifai-detect-app.herokuapp.com/imageurl", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -75,7 +75,7 @@ export default class App extends Component {
       .then((res) => res.json())
       .then((res) => {
         if (res) {
-          fetch("http://localhost:8080/image", {
+          fetch("https://clarifai-detect-app.herokuapp.com:8080/image", {
             method: "put",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({

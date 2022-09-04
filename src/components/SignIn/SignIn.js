@@ -18,7 +18,7 @@ export default class SignIn extends Component {
   };
 
   onSubmitSignIn = () => {
-    fetch("http://localhost:8080/signin", {
+    fetch("https://clarifai-detect-app.herokuapp.com/signin", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
