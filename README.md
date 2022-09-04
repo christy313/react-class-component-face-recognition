@@ -1,11 +1,17 @@
-# Getting Started with Create React App
-
 ### Summary 
-This is a simple app for face-detection temporarily deployed in Heroku until November 28th, 2022.
+This is a simple React app for face-detection with login and sign up functions.
 
-![face-detection demo](https://clarifai-detect-app-front-end.herokuapp.com/)
+[face-detection demo](https://clarifai-detect-app-front-end.herokuapp.com/)
 
 ![](./image/fact-detection.gif)
+
+### Technologies
+
+Front-end: React/Tachyons
+
+Back-end: Express/knex/PostgreSQL
+
+Face detection API: Clarifai
 
 ### `npm start`
 
