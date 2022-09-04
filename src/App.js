@@ -75,7 +75,7 @@ export default class App extends Component {
       .then((res) => res.json())
       .then((res) => {
         if (res) {
-          fetch("https://clarifai-detect-app.herokuapp.com:8080/image", {
+          fetch("https://clarifai-detect-app.herokuapp.com/image", {
             method: "put",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
