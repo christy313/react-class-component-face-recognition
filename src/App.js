@@ -89,7 +89,8 @@ export default class App extends Component {
                   entries: count,
                 })
               );
-            });
+            })
+            .catch(console.log);
         }
         this.displayFaceBox(this.calculateFaceLocation(res));
       })
